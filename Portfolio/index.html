@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/all.css">
+    <title>personal portfolio website Create</title>
+</head>
+<body>
+     <!-----start Hearder section----->
+     <div id="hearder">
+        <div class="contenier">
+            <nav >
+                <img src="https://i.ytimg.com/vi/nnpEmeLlM0Y/maxresdefault.jpg" alt="logo" class="logo">
+                <ul id="sidmenu">
+                    <li><a href="#hearder">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                 </ul>
+                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+              </nav> 
+              <div class="hearder-text">
+                <p>Aspiring Web Developer</p>
+                <h1>Hi I am <span>Jyotiraditya Rai</span> <br> From Uttar Pradesh</h1>
+              </div>       
+            </div>
+        </div>
+     </div>
+      <!-----End Hearder section----->
+
+
+      <!-----start About section----->
+      <div id="about">
+        <div class="contenier">
+            <div class="row">
+                <div class="about-col-1">
+                  <img src="https://yt3.ggpht.com/a/AATXAJykuWlFq-cuKIeK_OA0yWy_baioyCfmUUf6uw=s900-c-k-c0xffffffff-no-rj-mo" >  
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Us</h1>
+                    <p> Hi, My name is Jyotiraditya rai and I am from Uttar Pradesh district Gorakhpur. I have done my schooling in RNCK Intermediate college. After that i take Admission in 2021 at LNCT Course B.Tech(Information Technology).In second year i have start learning Web Development. </p>
+                   <div class="tab-titles">
+                    <p class="tab-links active-link " onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                   </div>
+                   <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Programming language</span><br>C++,Java
+                        Html,CSS & Javascript</li>
+                        <li><span>Development</span><br> Web App development</li>
+                        <li><span>Management</span><br>Project management</li>
+                    </ul>
+                
+                   </div>
+                   <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>B.Tech(Information Technology)</span><br>LNCT GROUP OF COLLEGE BHOPAL,MADHYA PRADESH</li>
+                        <li><span>Current</span><br> In second year</li>
+                        <li><span>Duration</span><br>2021-2025</li>
+                    </ul>
+                   </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <!-----End About section----->
+
+
+        <!----portfolio section Start ----->
+
+        <div id="portfolio">
+            <div class="contenier">
+                <h1 class="sub-title">My Work</h1>
+                <p>Nowdays i have start part time work as a digital marketer and content writer.</p>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="https://i.pinimg.com/736x/b1/a7/1d/b1a71d518f974fcf8df9c2143ea2d148.jpg" >
+                        <div class="layer">
+                            <h3>Digital Marketing</h3>
+                            <p>Learn some demanding skills in this field then start earning.</p>
+                            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                        
+                    </div>
+                    <div class="work">
+                        <img src="https://www.techive.in/techive/images/content-snapshot.PNG" >
+                        <div class="layer">
+                            <h3>Content Writer</h3>
+                            <p>I have learned some basic content writing skills.</p>
+                            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                        
+                    </div>
+                
+                  
+                </div>
+                <a href="#" class="btn">Learn More</a>
+
+            </div>
+        </div>
+         <!----portfolio section End ----->
+
+
+          <!----Contact section Start ----->
+          <div id="contact">
+            <div class="contenier">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Us</h1>
+                        <p><i class="fa-solid fa-paper-plane"></i>jyotiradityarai@gmail.com</p>
+                        <p><i class="fa-solid fa-square-phone-flip"></i>6394771165</p>
+                        <div class="social-icons">
+                            <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                            <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+                            <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                        <a href="" class="btn btn2">Download CV</a>
+
+                    </div>
+                    <div class="contact-right">
+                        <form >
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="Email" name="Email" placeholder="Your Email" required>
+                            <textarea name="massage" rows="6" placeholder="Your Massage"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+           
+   
+          <!----Contact section End ----->
+  
+      <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+        
+      </script>
+
+    <script>
+        var sidmenu = document.getElementById("sidmenu");
+        function openmenu(){
+            sidmenu.style.right ="0";
+        }
+        function closemenu(){
+            sidmenu.style.right ="-200px";
+        }
+    </script>
+</body>
+</html>
